@@ -1,15 +1,16 @@
 #!/usr/bin/env python
-#coding:utf-8
-#Description: Python 3.x环境执行，安装依赖模块pip3 install requests
+# coding:utf-8
+# Description: Python 3.x环境执行，安装依赖模块pip3 install requests
 
 import traceback
 import requests,json,time
 from concurrent.futures import ThreadPoolExecutor
 
 data = {}
-#ip地址库,'http://ip.taobao.com/service/getIpInfo.php' 为淘宝IP地址库
+# ip地址库,'http://ip.taobao.com/service/getIpInfo.php' 为淘宝IP地址库
+# 其他参考ip地址库 https://www.ipip.net/support/api.html
 ip_address_database='http://ip.taobao.com/service/getIpInfo.php'
-#需要分析的nginx日志文件
+# 需要分析的nginx日志文件
 log_file_path = 'access.log'
 america_ip_details_file = '美国IP详细信息_{}.txt'.format(time.time())
 ip_query_fail_file = '查询失败IP_{}.txt'.format(time.time())
